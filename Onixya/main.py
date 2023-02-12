@@ -44,9 +44,8 @@ def uploadFiles():
             uploaded_file.save(file_path)
             parseJSON(file_path, mydb, mycursor)
            
-        # save the file
+            return '<script>alert("Files were created successfully and saved under DOWNLOADS folder!"); window.location="/";</script>'
         return redirect(url_for('index'))
-
 
 # =========================================================
 
